@@ -6,7 +6,7 @@ from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
 import os
 from nltk.tokenize import word_tokenize
-
+nltk.download('punkt_tab')
 
 # Add this block BEFORE any nltk usage
 nltk_data_path = os.path.join(os.getcwd(), "nltk_data")
