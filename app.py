@@ -5,6 +5,8 @@ import nltk
 from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
 import os
+from nltk.tokenize import word_tokenize
+
 
 # Add this block BEFORE any nltk usage
 nltk_data_path = os.path.join(os.getcwd(), "nltk_data")
@@ -27,7 +29,7 @@ stop_words = set(stopwords.words('english'))
 
 def transform_text(text):
     text=text.lower()
-    text=nltk.word_tokenize(text)
+    text = word_tokenize(text, language='english')
 
     y=[]
     for i in text:
